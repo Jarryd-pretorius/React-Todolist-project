@@ -9,6 +9,7 @@
   z-index: 1000;
   width: 60%;
   height: 40%;
+  border-radius: 10px;
 }
 
 .modal-transback {
@@ -18,5 +19,23 @@
   bottom: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.cross {
+  position: relative;
+  float: right;
+  -webkit-transform: translate(-20%, 20%);
+          transform: translate(-20%, 20%);
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.cross:hover {
+  background-color: white;
+  color: orange;
 }
 /*# sourceMappingURL=modal.css.map */

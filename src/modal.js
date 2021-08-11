@@ -4,10 +4,14 @@ import "./Styles/modal.css"
 function Modal({modalClose}) {
     const [theme, setTheme] = useState(false);
     return (
-        <div className = "modal-transback">
+        <div  
+        className = "modal-transback"
+        onClick = {() => { modalClose(false)          
+        }}>
             <div className="modalcontain">
-                <button onClick = {() => {
-                        modalClose(false)          
+                <button 
+                className = "cross"
+                onClick = {() => { modalClose(false)          
                     }} > X </button>
                 <div className="setting-title">
                 </div>

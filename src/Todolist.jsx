@@ -18,7 +18,7 @@ function Todolist() {
     }
     const allTodos = useSelector(todoSelectors.selectEntities)
     const todoList = [];
-    console.log(todoList)
+    console.log(todoList.completed)
     for (const id in allTodos) {
         if (Object.hasOwnProperty.call(allTodos, id)) {
             const todoItem = allTodos[id];
@@ -30,6 +30,10 @@ function Todolist() {
                 text = {todoItem.todo}
                 />)
         }
+    }
+
+    const markedCompleted = () => {
+       
     }
    
 
@@ -43,7 +47,7 @@ function Todolist() {
             onChange ={(e) => setTodo(e.target.value)} />
             <button onClick = {todoAdd}>add todo</button>
             <div>{todoList}</div>
-            <button></button>
+            <button onClick = {markedCompleted}>completed tasks</button>
         </div>
         
     )
