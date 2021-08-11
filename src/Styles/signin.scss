@@ -1,0 +1,67 @@
+.signin-ctn {
+    display: flexbox;
+    text-align: center;
+    background-color: white;
+    margin:20%;
+    padding: 5%;
+    justify-content: center;
+    border-radius: 20px;
+    border: 3px ;
+    box-shadow:
+    0 8.2px 15.1px -1px rgba(0, 0, 0, 0.024),
+    0 15.9px 28.4px -1px rgba(0, 0, 0, 0.044),
+    0 23.7px 40.5px -1px rgba(0, 0, 0, 0.064),
+    0 33px 53.5px -1px rgba(0, 0, 0, 0.084),
+    0 48.4px 73.7px -1px rgba(0, 0, 0, 0.107),
+    0 100px 160px -1px rgba(0, 0, 0, 0.14);
+}
+
+#slogan {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(134, 134, 134);
+    
+}
+#Useverb {
+    font-family: sans-serif;
+    font-size: 1.5em ;
+    color: #ff9000 ;
+    font-style: italic;
+}
+.form-inner {
+    width: 60%;
+    height: 30px;
+    border-color: none;
+    border: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-top: 30px;
+    border-bottom: 1px solid grey;
+}
+.form-inner:focus {
+    outline: none;
+}
+#logoin-btn {
+    font-family: sans-serif;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: grey;
+    box-shadow:
+  0 8.2px 15.1px -1px rgba(0, 0, 0, 0.002),
+  0 15.9px 28.4px -1px rgba(0, 0, 0, 0.008),
+  0 23.7px 40.5px -1px rgba(0, 0, 0, 0.017),
+  0 33px 53.5px -1px rgba(0, 0, 0, 0.035),
+  0 48.4px 73.7px -1px rgba(0, 0, 0, 0.073),
+  0 100px 160px -1px rgba(0, 0, 0, 0.14);
+
+}
+#logoin-btn:hover {
+    background-color: orange;
+    color: white;
+    font-weight: 550;
+}

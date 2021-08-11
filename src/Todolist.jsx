@@ -4,6 +4,7 @@ import {useDispatch} from 'react-redux';
 import { todoSelectors } from './redux/todoSlice';
 import { addTodo, addTodos} from "./redux/todoSlice";
 import Todo from "./Todo";
+import "./Styles/todo.css"
 
 function Todolist() {
     const dispatch = useDispatch();
@@ -33,8 +34,8 @@ function Todolist() {
    
 
     return (
-        <div>
-           <h2>todolist</h2> 
+        <div className="title-ctn">
+           <h2 className ="todoTitle" >Whats on your mind?</h2> 
            <input 
            value={todo} 
            type="text" 
@@ -44,6 +45,7 @@ function Todolist() {
             <div>{todoList}</div>
             <button></button>
         </div>
+        
     )
 }
 

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import { addUser } from "./redux/userSlice";
 import {nanoid} from '@reduxjs/toolkit';
-
+import "./Styles/signin.css"
 
 function Login() {
 
@@ -18,12 +18,14 @@ function Login() {
     }
 
     return (
-        <div>
-            <h2>useVerb</h2>
+        <div className= "signin-ctn">
+             <span id = "slogan">keeping track of things? - </span>
+              <span id = "Useverb">UseVerb</span>
             <br />
-            <input value = {name} type="text" onChange={(e)=> setName(e.target.value)}  /><br />
-            <input  value ={password} type="password" onChange={e=> setPassword(e.target.value)} />
-            <button onClick = {submit}>login</button>
+            <input placeholder="Enter name.." className="form-inner" value = {name} type="text" onChange={(e)=> setName(e.target.value)}  /><br />
+            <input placeholder="Enter password.." className = "form-inner" value ={password} type="password" onChange={e=> setPassword(e.target.value)} />
+            <br/>
+            <button id="logoin-btn" onClick = {submit}>login</button>
         </div>
     )
 }

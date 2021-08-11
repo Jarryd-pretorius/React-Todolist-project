@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar />
-        <Route path="/Dashboard" component = {Todolist}/>
-        <Route path = "/signin" component = {Login}/>
+        <Route path="/Dashboard" exact component = {Todolist}/>
+        <Route path = "/signin"  component = {Login}/>
       </header>
     </div>
     </Router>
