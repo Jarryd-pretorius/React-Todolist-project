@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
-
+import "./Styles/modal.css"
 
 function Modal({modalClose}) {
-    const [openModal, setOpenModal] = useState(false)
     const [theme, setTheme] = useState(false);
     return (
         <div className = "modal-transback">
@@ -11,7 +10,6 @@ function Modal({modalClose}) {
                         modalClose(false)          
                     }} > X </button>
                 <div className="setting-title">
-                    <h1>list settings</h1>
                 </div>
                 <div className="body">
                     <button>Dark mode</button>

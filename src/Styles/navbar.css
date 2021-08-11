@@ -5,12 +5,15 @@
   text-align: right;
 }
 
-#settings {
-  margin-top: 15px;
-  margin-right: 20px;
+.logout {
+  text-align: center;
 }
 
-.logout {
-  margin-right: 5px;
+.openModalBtn {
+  background-color: orange;
+  border: none;
+  color: white;
+  margin-top: 8px;
+  margin-right: 8px;
 }
 /*# sourceMappingURL=navbar.css.map */
