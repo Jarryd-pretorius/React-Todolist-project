@@ -11,7 +11,8 @@ const todoSlice = createSlice({
         addTodo: todoAdapter.addOne,
         addTodos: todoAdapter.addMany,
         deleteTodo: todoAdapter.removeOne,
-        markCompleted: todoAdapter.updateOne
+        markCompleted: todoAdapter.updateOne,
+    
         }
     
 });
