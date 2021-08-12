@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {useDispatch} from 'react-redux';
 import { todoSelectors } from './redux/todoSlice';
 import { addTodo, addTodos} from "./redux/todoSlice";
+import { addUser } from './redux/userSlice';
 import Todo from "./Todo";
 import "./Styles/todo.css"
 
@@ -35,17 +36,26 @@ function Todolist() {
     const markedCompleted = () => {
        
     }
+    const Username = useSelector((state) => state.user.UserName)
+    console.log(Username);
+
+
+     
    
 
     return (
         <div className="title-ctn">
-           <h2 className ="todoTitle" >Whats on your mind?</h2> 
+           <h2 className ="todoTitle" >{Username}</h2> 
            <input 
            value={todo} 
            type="text" 
            placeholder="enter todo.."
+           className ="input-box"
             onChange ={(e) => setTodo(e.target.value)} />
-            <button onClick = {todoAdd}>add todo</button>
+            <button 
+            onClick = {todoAdd}
+            className = "input-btn"
+            >add todo</button>
             <div>{todoList}</div>
             <button onClick = {markedCompleted}>completed tasks</button>
         </div>

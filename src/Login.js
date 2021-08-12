@@ -1,21 +1,24 @@
 import React, {useState} from 'react'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import { addUser } from "./redux/userSlice";
-import {nanoid} from '@reduxjs/toolkit';
 import "./Styles/signin.css"
 
 function Login() {
 
+    
     const dispatch = useDispatch();
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     console.log(name, password);
+    const users =  useSelector((state) => state.users)
+    
 
-    const submit = () => {
-        if (name.length >= 4) {
-            dispatch(addUser({id: nanoid(), user: name, password: password, darkTheme: false    }));
-        }
+    const userAdd = (e) => {
+        e.preventDefault();
+        dispatch(addUser({name,password}))
     }
+
+    
 
     return (
         <div className= "signin-ctn">
@@ -25,7 +28,7 @@ function Login() {
             <input placeholder="Enter name.." className="form-inner" value = {name} type="text" onChange={(e)=> setName(e.target.value)}  /><br />
             <input placeholder="Enter password.." className = "form-inner" value ={password} type="password" onChange={e=> setPassword(e.target.value)} />
             <br/>
-            <button id="logoin-btn" onClick = {submit}>login</button>
+            <button id="logoin-btn" onClick = {userAdd}>login</button>
         </div>
     )
 }

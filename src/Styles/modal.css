@@ -1,4 +1,4 @@
-.modalcontain {
+.modalcontain-dark {
   position: fixed;
   text-align: center;
   top: 50%;
@@ -6,6 +6,20 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: white;
+  z-index: 1000;
+  width: 60%;
+  height: 40%;
+  border-radius: 10px;
+}
+
+.modalcontain-light {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: green;
   z-index: 1000;
   width: 60%;
   height: 40%;
