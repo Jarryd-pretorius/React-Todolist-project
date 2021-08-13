@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 .modalcontain-dark {
    position: fixed;
    text-align: center;
@@ -16,13 +23,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-     background-color: green ;
+     background-color: white ;
      z-index: 1000;
      width: 60%;
      height: 40%;
      border-radius: 10px;
  }
- 
+
+ .form-inner- {
+     text-align: center;
+     padding-top: 5%;
+ }
+ .footer {
+    padding-top: 10%;
+    height: 20px;
+ }
 
 .modal-transback {
     position: fixed;

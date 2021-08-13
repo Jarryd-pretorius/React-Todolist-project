@@ -34,33 +34,22 @@ function Modal({modalClose}) {
     return (
         <div  
         className = "modal-transback"
-        // onClick = {() => { modalClose(false)          
-        // }}
+       
         >
             <div className={"modalcontain-" + themeBase}>
-                <button onClick = {ChangeUser()}>save name</button>
-                <button 
-                className = "cross"
-                onClick = {() => { modalClose(false)          
-                    }} > X </button>
-                <div className="setting-title">
-                </div>
-                <div className="body">
-                    <button onClick = {themeChanger}>Dark mode</button>
-                </div>
                 <input
                 
-                 placeholder="Enter name.."
+                 placeholder="New name..."
                   className="form-inner" 
                   value = {user} type="text"
                      onChange={(e)=> setUser(e.target.value)}  /><br />
                 <div className="footer">
-                    <button onClick = {() => {
-                        modalClose(false)          
-                    }}> Cancel </button>
+                <button onClick = {ChangeUser()}>save name</button>
+                    
                     <button onClick = {() => {
                         modalClose(false)          
                     }}>  Continue </button>
+                    <button onClick = {themeChanger}>Dark mode</button>
                 </div>
             </div>
         </div>

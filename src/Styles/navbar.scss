@@ -5,14 +5,26 @@
     text-align: right;
 
 }
+.navbar-dark {
+    background-color: green;
+    height: 50px;
+    display: -ms-flexbox;
+    text-align: right;
 
+}
 #settings {
     
     
 }
 .logout {
-    text-align: center;
-    
+    transform: translate(0,-20%);
+    padding: 10px;
+    background: white;
+    color: orange;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
 }
 
 .openModalBtn {
