@@ -6,9 +6,10 @@ import { createSlice, createEntityAdapter } from '@reduxjs/toolkit'
 const userSlice = createSlice({
     name: "users",
     initialState: {
-        userName: "",
+        userName: "Wayne",
         password: "",
-        theme: "light"
+        theme: "light",
+        todos: []
     },
     
     reducers: {
@@ -25,10 +26,14 @@ const userSlice = createSlice({
             },
             changeThemeLight: (state, action) => {
                 state.theme = action.payload.themeLight;
+            },
+            addTodoList: (state, action) => {
+                state.todos = action.payload.todolist;
             }
+
         },
     
 });
 
-export const {addUser, modifiyUser, changeTheme, changeThemeLight, changeThemeDark} = userSlice.actions
+export const {addUser, modifiyUser, changeTheme, changeThemeLight, changeThemeDark, addTodoList} = userSlice.actions
 export default userSlice.reducer

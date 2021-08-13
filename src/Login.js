@@ -11,11 +11,15 @@ function Login() {
     const [password, setPassword] = useState("");
     console.log(name, password);
     const users =  useSelector((state) => state.users)
+    const inputPlaceholder = useSelector((state) => state.user.userName)
+    
+    
     
 
     const userAdd = (e) => {
         e.preventDefault();
         dispatch(addUser({name,password}))
+    
     }
 
     
@@ -25,8 +29,8 @@ function Login() {
              <span id = "slogan">keeping track of things? - </span>
               <span id = "Useverb">UseVerb</span>
             <br />
-            <input placeholder="Enter name.." className="form-inner" value = {name} type="text" onChange={(e)=> setName(e.target.value)}  /><br />
-            <input placeholder="Enter password.." className = "form-inner" value ={password} type="password" onChange={e=> setPassword(e.target.value)} />
+            <input placeholder={"Name: " + inputPlaceholder} className="form-inner" value = {name} type="text" onChange={(e)=> setName(e.target.value)}  /><br />
+            <input placeholder={"Password: " + inputPlaceholder+"Rockz!123"} className = "form-inner" value ={password} type="password" onChange={e=> setPassword(e.target.value)} />
             <br/>
             <button id="logoin-btn" onClick = {userAdd}>login</button>
         </div>

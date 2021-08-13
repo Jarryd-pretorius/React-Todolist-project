@@ -11,7 +11,7 @@ const Todo = ({text, completed, id}) => {
             id: id,
             changes: {completed: !completed},
         }))  
-    };
+    }; 
 
     const deleteItem= () => {
         dispatch(deleteTodo(id))

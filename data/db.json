@@ -1,0 +1,16 @@
+{
+    "todos": [
+        {
+            "todo": "feed fish",
+            "completed": false,
+            "id": 1
+            
+        },
+
+        {
+            "todo": "go for walk",
+            "completed": true,
+            "id": 2
+        }
+    ]
+}
