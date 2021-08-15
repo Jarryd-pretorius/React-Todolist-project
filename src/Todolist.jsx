@@ -18,6 +18,7 @@ function Todolist() {
   const nameInput = useSelector ((state) => (state.user.userName))
   const [todos, setTodos] = useState([])
   const [todo, setTodo] = useState("");
+  const [todoHistory, setTodoHistory] = useState([])
   const [completedTodoToogle,setCompletedTodosToogle] = useState(false)
   const [completedTodoList, setCompletedTodoList] = useState([]);
   
@@ -47,13 +48,12 @@ function Todolist() {
     e.preventDefault();
 
     const newTodo = {
-      id: new Date(),
+      
       text: todo,
       completed: false,
     };
 
     setTodos([...todos].concat(newTodo));
-    
     setTodo("");
     dispatch(addTodoList({todos}))
   }
@@ -63,6 +63,8 @@ function Todolist() {
     setTodos(updatedTodos);
     
   }
+
+
   
   
 
@@ -82,9 +84,6 @@ function Todolist() {
     const updatedTodos = [...todos]
     updatedTodos[index].completed = !updatedTodos[index].completed
     setTodos(updatedTodos);
-    console.log(todos)
-
-    
   }
 
 
@@ -101,7 +100,7 @@ function Todolist() {
                  onClick={() => {
                    completedArray();
                    setCompletedTodosToogle(!completedTodoToogle);
-                 }}>show only completed Tasks</button>
+                 }}>Show only completed Tasks</button>
           <form onSubmit={handleSubmit}>
           <button  
           className = "input-btn"
