@@ -13,11 +13,9 @@ function App() {
     <div className="App">
       
       <header className="App-header">
-      <Navbar path="/" />
-      
-      <Route path = "/signin" basename="/sigin"  component = {Login}/>
-        
-        <Route path="/Dashboard"  exact component = {Todolist}/>
+        <Navbar />
+        <Route path = "/signin" basename="/sigin"  component = {Login}/>
+        <Route path="/Dashboard" exact component = {Todolist}/>
         
       </header>
     </div>

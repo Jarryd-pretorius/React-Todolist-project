@@ -60,7 +60,8 @@ function Todolist() {
   }
   
 
-  function completedArray() {
+  function completedArray(e) {
+    
     const CompletedTodos = todos.filter( todo => {
       return todo.completed !== false;
       
@@ -84,18 +85,17 @@ function Todolist() {
  
 
 
-  
 
     return (
         <div className = "todolist-contain">
                 <h1 className = "todoTitle">{"Hi!,  "+nameInput}</h1>
                 <h2 className = "todoTitle">What needs doing?</h2>
                 <button 
-                  className="showTodos"
+                  className={"showTodos-" + completedTodoToogle}
                  onClick={() => {
                    completedArray();
                    setCompletedTodosToogle(!completedTodoToogle);
-                 }}>completed</button>
+                 }}>show completed Tasks</button>
           <form onSubmit={handleSubmit}>
           <button  
           className = "input-btn"
@@ -112,24 +112,40 @@ function Todolist() {
           <div className="organiser">
            
           </div>
-          <div className="todoText-ctn">
-          
-          
-              {completedTodoToogle && todos.map((todo, index) => (
-                <div key={todo.id} className="todo">
-                  
-                    
-                      <div className = "todos-text">{todo.text}</div>
-                  <div className="todo-actions">
-                    <input type="checkbox"
-                    onClick = {() => toggleCompleted(index)}  />
-                    <button classname = "delete-btn" onClick={() => deleteTodo(todo.id)}>X</button>
-                  </div>
-                </div>
+          <div>
+
+            {completedTodoToogle ? 
+           <div className="todoText-ctn">
+           {completedTodoList.map((completed, index) => (
+             <div key={todo.id} className={"todo-"+ completed.completed}>
+               
+                 
+                   <div className = "todos-text">{completed.text}</div>
+               <div className="todo-actions">
+                 <input type="checkbox"
+                 onClick = {() => toggleCompleted(index)}  />
+                 <button classname = "delete-btn" onClick={() => deleteTodo(completed.id)}>X</button>
+               </div>
+             </div>
+             
+           )) }</div> :
+           <div className="todoText-ctn">
+          {todos.map((todo, index) => (
+            <div key={todo.id} className={"todo-" + todo.completed}>
+              
                 
-              )) }
- 
+                  <div className = "todos-text">{todo.text}</div>
+              <div className="todo-actions">
+                <input type="checkbox"
+                onClick = {() => toggleCompleted(index)}  />
+                <button classname = "delete-btn" onClick={() => deleteTodo(todo.id)}>X</button>
+              </div>
+            </div>
+            
+          )) } </div> }
+    
           </div>
+          
         </div>
     )
 }
