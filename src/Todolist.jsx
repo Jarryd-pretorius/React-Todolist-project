@@ -4,7 +4,6 @@ import { addTodoList } from "./redux/userSlice";
 import {useSelector} from 'react-redux';
 import {useDispatch} from 'react-redux';
 import "./Styles/todo.css"
-import { BiAddToQueue } from 'react-icons/bi';
 import {TiTick} from 'react-icons/ti';
 
 

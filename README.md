@@ -1,6 +1,8 @@
-# Useverb Tasklist extension
+# Useverb Tasklist app
 
-Here is my skill test, Hope you enjoy using it :). its got some simple sass queries, state react aswell as some small redux functions for the login section. I really enjoyed doing this todo and would love to work on projects like this at UseVerb!.
+Here is the project, it took me about 7-8 hours around a pretty hectic schedule and the only research i did was reading up on the on the redux syntax again Hope you enjoy using it.  I really enjoyed doing this todo project and would love to work on projects like this at UseVerb!.
+
+
 
 kind regards,
 Jarryd.

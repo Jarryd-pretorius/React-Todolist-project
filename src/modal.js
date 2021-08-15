@@ -52,8 +52,6 @@ function Modal({modalClose}) {
                      <br />
                 <div className="footer">
                 <button onClick = {ChangeUser()}>save name</button>
-                    
-                    <button>  New name? </button>
                     <button onClick = {themeChanger}>{themeBase+" mode"}</button>
                     
                 </div>

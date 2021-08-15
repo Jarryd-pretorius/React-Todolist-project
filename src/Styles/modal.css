@@ -5,7 +5,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #b300b3;
+  background-color: white;
   z-index: 1000;
   width: 60%;
   height: 40%;
