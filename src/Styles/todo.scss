@@ -168,13 +168,16 @@ $phone: 780px;
 .todoTitle {
     font-family: sans-serif;
     color: grey;
+    transform: translate(0,100px
+    );
     margin-left: 50%;
-    margin-top: 5%;
+    
     font-style: italic;
     @media (max-width:$phone){
         display: block;
         text-align: center;
-        margin-right: 10%;
+        transform: translate(-150px, 50px);
+        
         
     }
     
@@ -184,7 +187,7 @@ $phone: 780px;
 .input-box {
     font-family: sans-serif;
     border: none;
-    display: inline-block;
+    
     font-size: 1em;
     text-align: center;
     padding-bottom: 10px;
@@ -238,7 +241,11 @@ $phone: 780px;
     transform: translate(0, 50px);
     color: orange;
     font-weight: bolder;
-    border: none;
+    border: none; 
+    @media (max-width: $phone) {
+        text-align: center;
+        transform: translate(60px, 170px);
+    }
 
 }
 .showTodos-true {
@@ -257,6 +264,10 @@ $phone: 780px;
     color: white;
     box-shadow: 16px 21px 19px -3px rgba(0,0,0,0.1);
     border: none;
+    @media (max-width: $phone) {
+        text-align: center;
+        transform: translate(60px, 170px);
+    }
 
 }
 

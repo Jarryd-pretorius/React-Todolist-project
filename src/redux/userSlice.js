@@ -28,7 +28,7 @@ const userSlice = createSlice({
                 state.theme = action.payload.themeLight;
             },
             addTodoList: (state, action) => {
-                state.todos = action.payload.todolist;
+                state.todos = action.payload.todos;
             }
 
         },

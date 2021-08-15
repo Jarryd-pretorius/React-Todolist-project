@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { BsPlusSquareFill } from "react-icons/bs";
+import { addTodoList } from "./redux/userSlice";
 import {useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import "./Styles/todo.css"
 import { BiAddToQueue } from 'react-icons/bi';
 import {TiTick} from 'react-icons/ti';
@@ -13,6 +15,7 @@ import {TiTick} from 'react-icons/ti';
 
 
 function Todolist() {
+  const dispatch = useDispatch();
   const nameInput = useSelector ((state) => (state.user.userName))
   const [todos, setTodos] = useState([])
   const [todo, setTodo] = useState("");
@@ -51,7 +54,9 @@ function Todolist() {
     };
 
     setTodos([...todos].concat(newTodo));
+    
     setTodo("");
+    dispatch(addTodoList({todos}))
   }
   
   function deleteTodo(id) {
@@ -59,11 +64,7 @@ function Todolist() {
     setTodos(updatedTodos);
     
   }
-  function deleteCompletedTodo(id) {
-    let updatedTodos = [...todos].filter((todo) => todo.id !== id);
-    setCompletedTodoList(updatedTodos);
-    
-  }
+  
   
 
   function completedArray(e) {
@@ -94,14 +95,14 @@ function Todolist() {
 
     return (
         <div className = "todolist-contain">
-                <h1 className = "todoTitle">{"Hi!,  "+nameInput}</h1>
-                <h2 className = "todoTitle">What needs doing?</h2>
+                <h1 className = "todoTitle">{"Hello  "+nameInput}</h1>
+                <h2 className = "todoTitle">What needs doing today?</h2>
                 <button 
                   className={"showTodos-" + completedTodoToogle}
                  onClick={() => {
                    completedArray();
                    setCompletedTodosToogle(!completedTodoToogle);
-                 }}>show completed Tasks</button>
+                 }}>show only completed Tasks</button>
           <form onSubmit={handleSubmit}>
           <button  
           className = "input-btn"

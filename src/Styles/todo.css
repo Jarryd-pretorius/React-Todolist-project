@@ -171,8 +171,9 @@
 .todoTitle {
   font-family: sans-serif;
   color: grey;
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
   margin-left: 50%;
-  margin-top: 5%;
   font-style: italic;
 }
 
@@ -180,14 +181,14 @@
   .todoTitle {
     display: block;
     text-align: center;
-    margin-right: 10%;
+    -webkit-transform: translate(-150px, 50px);
+            transform: translate(-150px, 50px);
   }
 }
 
 .input-box {
   font-family: sans-serif;
   border: none;
-  display: inline-block;
   font-size: 1em;
   text-align: center;
   padding-bottom: 10px;
@@ -253,6 +254,14 @@
   border: none;
 }
 
+@media (max-width: 780px) {
+  .showTodos-false {
+    text-align: center;
+    -webkit-transform: translate(60px, 170px);
+            transform: translate(60px, 170px);
+  }
+}
+
 .showTodos-true {
   font-family: sans-serif;
   padding: 10px;
@@ -271,6 +280,14 @@
   -webkit-box-shadow: 16px 21px 19px -3px rgba(0, 0, 0, 0.1);
           box-shadow: 16px 21px 19px -3px rgba(0, 0, 0, 0.1);
   border: none;
+}
+
+@media (max-width: 780px) {
+  .showTodos-true {
+    text-align: center;
+    -webkit-transform: translate(60px, 170px);
+            transform: translate(60px, 170px);
+  }
 }
 
 .todoBtn-true {
