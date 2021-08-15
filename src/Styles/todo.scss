@@ -29,6 +29,7 @@ $phone: 780px;
         background-color: orange;
         color: white;
         margin: 5%;
+        @media (max-width: $phone){}
         
     }
 
@@ -114,12 +115,6 @@ $phone: 780px;
     
 }
 
-#marked {
-    color: green;
-}
-#notMarked {
-    background-color: red;
-}
 .todoText-ctn-marked{
     display: inline-block;
     float: left;
@@ -230,9 +225,3 @@ $phone: 780px;
     
 }
 
-#marked {
-    color: green;
-}
-#notMarked {
-    background-color: red;
-}

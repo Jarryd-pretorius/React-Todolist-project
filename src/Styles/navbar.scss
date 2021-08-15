@@ -1,4 +1,4 @@
-.navbar {
+.navbar-light {
     background-color: orange;
     height: 50px;
     display: -ms-flexbox;
@@ -6,7 +6,7 @@
 
 }
 .navbar-dark {
-    background-color: green;
+    background-color: #ab03ff;
     height: 50px;
     display: -ms-flexbox;
     text-align: right;
@@ -16,7 +16,7 @@
     
     
 }
-.logout {
+.logout-light {
     transform: translate(0,-20%);
     padding: 10px;
     background: white;
@@ -26,9 +26,26 @@
     font-weight: 600;
     border-radius: 5px;
 }
+.logout-dark {
+    transform: translate(0,-20%);
+    padding: 10px;
+    background: white;
+    color: #ab03ff;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+}
 
-.openModalBtn {
+.openModalBtn-light {
     background-color: orange;
+    border: none;
+    color: white;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+.openModalBtn-dark {
+    background-color: #ab03ff;
     border: none;
     color: white;
     margin-top: 8px;

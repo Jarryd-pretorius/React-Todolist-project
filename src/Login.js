@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { addUser } from "./redux/userSlice";
 import "./Styles/signin.css"
-import Navbar from './Navbar';
 import {useHistory } from 'react-router-dom';
 function Login() {
 
@@ -11,10 +10,12 @@ function Login() {
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     console.log(name, password);
-    const users =  useSelector((state) => state.users)
     const inputPlaceholder = useSelector((state) => state.user.userName)
+    const themeBase = useSelector ((state) => (state.user.theme))
+    
 
 
+   
     
     
 
@@ -41,16 +42,16 @@ function Login() {
     return (
         <div>
             
-        <div className= "signin-ctn">
+        <div className= {"signin-ctn-"+themeBase}>
              
-             <span id = "slogan">keeping track of things? - </span>
-              <span id = "Useverb">UseVerb</span>
+             <span id = {"slogan-"+themeBase}>keeping track of things? - </span>
+              <span id = {"Useverb"}>UseVerb</span>
             <br />
             <input placeholder={"Name: " + inputPlaceholder} className="form-inner" value = {name} type="text" onChange={(e)=> setName(e.target.value)}  /><br />
             <input placeholder={"Password: " + inputPlaceholder+"Rockz!123"} className = "form-inner" value ={password} type="password" onChange={e=> setPassword(e.target.value)} />
             
             <br/>
-            <button id="logoin-btn" onClick = {userAdd}>login</button>
+            <button id={"logoin-btn-"+themeBase} onClick = {userAdd}>login</button>
         </div>
         </div>
     )

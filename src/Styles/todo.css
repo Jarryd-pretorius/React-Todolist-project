@@ -119,14 +119,6 @@
   }
 }
 
-#marked {
-  color: green;
-}
-
-#notMarked {
-  background-color: red;
-}
-
 .todoText-ctn-marked {
   display: inline-block;
   float: left;
@@ -246,13 +238,5 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-}
-
-#marked {
-  color: green;
-}
-
-#notMarked {
-  background-color: red;
 }
 /*# sourceMappingURL=todo.css.map */

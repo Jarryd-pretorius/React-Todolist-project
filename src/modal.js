@@ -15,6 +15,7 @@ function Modal({modalClose}) {
     const themeDark = "dark"
     const themeLight = "light"
     
+    
 
     const ChangeUser = () => {
         dispatch(modifiyUser({user}))        
@@ -26,6 +27,7 @@ function Modal({modalClose}) {
         } else {
             dispatch(changeThemeLight({themeLight}))
         }
+
         
     }
 
@@ -37,19 +39,23 @@ function Modal({modalClose}) {
        
         >
             <div className={"modalcontain-" + themeBase}>
+            
                 <input
                 
                  placeholder="New name..."
                   className="form-inner" 
                   value = {user} type="text"
-                     onChange={(e)=> setUser(e.target.value)}  /><br />
+                     onChange={(e)=> setUser(e.target.value)}  />
+                     <button onClick = {() => {
+                        modalClose(false)          
+                    }} className={"cross-"+themeBase}>X</button>
+                     <br />
                 <div className="footer">
                 <button onClick = {ChangeUser()}>save name</button>
                     
-                    <button onClick = {() => {
-                        modalClose(false)          
-                    }}>  Continue </button>
-                    <button onClick = {themeChanger}>Dark mode</button>
+                    <button>  New name? </button>
+                    <button onClick = {themeChanger}>{themeBase+" mode"}</button>
+                    
                 </div>
             </div>
         </div>
