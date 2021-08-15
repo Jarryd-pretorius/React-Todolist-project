@@ -3,7 +3,8 @@ import { BsPlusSquareFill } from "react-icons/bs";
 import {useSelector} from 'react-redux';
 import "./Styles/todo.css"
 import { BiAddToQueue } from 'react-icons/bi';
-import {AiFillCheckCircle} from 'react-icons/ai';
+import {TiTick} from 'react-icons/ti';
+
 
 
 
@@ -56,7 +57,12 @@ function Todolist() {
   function deleteTodo(id) {
     let updatedTodos = [...todos].filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
-    console.log(updatedTodos);
+    
+  }
+  function deleteCompletedTodo(id) {
+    let updatedTodos = [...todos].filter((todo) => todo.id !== id);
+    setCompletedTodoList(updatedTodos);
+    
   }
   
 
@@ -117,14 +123,14 @@ function Todolist() {
             {completedTodoToogle ? 
            <div className="todoText-ctn">
            {completedTodoList.map((completed, index) => (
-             <div key={todo.id} className={"todo-"+ completed.completed}>
-               
-                 
-                   <div className = "todos-text">{completed.text}</div>
+             <div key={completed.id} className={"todo-"+ completed.completed}>
+              <div className = "todos-text">{completed.text}</div>
                <div className="todo-actions">
-                 <input type="checkbox"
-                 onClick = {() => toggleCompleted(index)}  />
-                 <button classname = "delete-btn" onClick={() => deleteTodo(completed.id)}>X</button>
+               <button 
+                className ={"todoBtn-" + completed.completed}
+                onClick = {() => toggleCompleted(index)}
+                ><TiTick/></button>
+                 
                </div>
              </div>
              
@@ -132,13 +138,14 @@ function Todolist() {
            <div className="todoText-ctn">
           {todos.map((todo, index) => (
             <div key={todo.id} className={"todo-" + todo.completed}>
-              
-                
                   <div className = "todos-text">{todo.text}</div>
               <div className="todo-actions">
-                <input type="checkbox"
-                onClick = {() => toggleCompleted(index)}  />
-                <button classname = "delete-btn" onClick={() => deleteTodo(todo.id)}>X</button>
+                <button 
+                className ={"todoBtn-" + todo.completed}
+                onClick = {() => toggleCompleted(index)}><TiTick/></button>
+                <button className = {"todoClsBtn-" + todo.completed}
+                 onClick={() => deleteTodo(todo.id)} 
+                 >X</button>
               </div>
             </div>
             

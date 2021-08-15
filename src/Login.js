@@ -47,7 +47,7 @@ function Login() {
              <span id = {"slogan-"+themeBase}>keeping track of things? - </span>
               <span id = {"Useverb"}>UseVerb</span>
             <br />
-            <input placeholder={"Name: " + inputPlaceholder} className="form-inner" value = {name} type="text" onChange={(e)=> setName(e.target.value)}  /><br />
+            <input placeholder={"Name: 4+ digits like " + inputPlaceholder +"!"} className="form-inner" value = {name} type="text" onChange={(e)=> setName(e.target.value)}  /><br />
             <input placeholder={"Password: " + inputPlaceholder+"Rockz!123"} className = "form-inner" value ={password} type="password" onChange={e=> setPassword(e.target.value)} />
             
             <br/>

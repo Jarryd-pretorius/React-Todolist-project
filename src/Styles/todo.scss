@@ -1,14 +1,14 @@
 $desktop: 1200px;
 $laptop: 1024px;
 $phone: 780px;
-
+ 
 
 
 .todoText-ctn{
     display: inline-block;
     float: left;
     margin-top: 15%;
-    margin-left: 10%;
+    margin-left: 5%;
 
     @media (max-width: $phone) {
         display: block;
@@ -26,10 +26,12 @@ $phone: 780px;
         padding: 5%;
         width: 250px;
         border-radius: 5px;
-        background-color: rgb(106, 194, 194);
+        background-color: green;
         color: white;
         margin: 5%;
-        @media (max-width: $phone){}
+        @media (min-width:$desktop) {
+            width: 400px;
+        }       
         
     }
 
@@ -44,7 +46,7 @@ $phone: 780px;
         background-color: whitesmoke;
         color: orange;
         margin: 5%;
-        @media (max-width: $phone){}
+       
     }
 
     .todo-text {
@@ -57,31 +59,22 @@ $phone: 780px;
     display: flexbox;
     text-align: center;
     position: relative;
-    left: 10% ;
-    top: 20%;
+   
     transform: translate();
 }
 
 .todoTitle {
     font-family: sans-serif;
     color: grey;
-    margin-left: 50%;
-    margin-top: 20%;
     font-style: italic;
+    
     @media (max-width:$phone){
         display: block;
         text-align: center;
-        margin-right: 10%;
-        margin: 20%;
+        
+        
     }
     
-}
-.todo-actions button {
-    background-color: white;
-    color: orange;
-    border: none;
-    font-family: sans-serif;
-    font-weight: 700;
 }
 
 .input-box {
@@ -176,23 +169,17 @@ $phone: 780px;
     font-family: sans-serif;
     color: grey;
     margin-left: 50%;
-    margin-top: 20%;
+    margin-top: 5%;
     font-style: italic;
     @media (max-width:$phone){
         display: block;
         text-align: center;
         margin-right: 10%;
-        margin: 20%;
+        
     }
     
 }
-.todo-actions button {
-    background-color: white;
-    color: orange;
-    border: none;
-    font-family: sans-serif;
-    font-weight: 700;
-}
+
 
 .input-box {
     font-family: sans-serif;
@@ -244,27 +231,82 @@ $phone: 780px;
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
-    margin-left: 10%;
+    margin-left: 5%;
     position: relative;
    background-color: whitesmoke;
+   box-shadow: 16px 21px 19px -3px rgba(0,0,0,0.1);
     transform: translate(0, 50px);
     color: orange;
-
+    font-weight: bolder;
     border: none;
 
 }
 .showTodos-true {
-     font-family: sans-serif;
+    font-family: sans-serif;
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
-    margin-left: 10%;
+    margin-left: 5%;
     position: relative;
-   background-color: rgb(106, 194, 194);
+   background-color: green;
     transform: translate(0, 50px);
     color: white;
-    
+    font-weight: bolder;
+    border: none;
+    transform: translate(0, 50px);
+    color: white;
+    box-shadow: 16px 21px 19px -3px rgba(0,0,0,0.1);
     border: none;
 
 }
+
+.todoBtn-true {
+    border: white;
+    padding: 8px;
+    border-radius: 50%;
+    color: green;
+    background: white;
+    position: relative;
+    float: right;
+    margin-left: 5%;
+    transform: translate(0, -80%);
+    font-weight: bolder;
+}
+.todoBtn-false {
+    border: white;
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+    background: orange;
+    position: relative;
+    float: right;
+    margin-left: 5%;
+    transform: translate(0, -80%);
+}
+
+.todoClsBtn-true {
+    border: white;
+    padding: 8px;
+    border-radius: 4px;
+    color: green;
+    background: white;
+    position: relative;
+    float: right;
+    margin-left: 5%;
+    transform: translate(0, -80%);
+    font-weight: bolder;
+}
+.todoClsBtn-false {
+    border: white;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    background: orange;
+    position: relative;
+    float: right;
+    margin-left: 5%;
+    transform: translate(0, -80%);
+    font-weight: bolder;
+}
+
 
