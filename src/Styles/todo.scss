@@ -3,7 +3,23 @@ $laptop: 1024px;
 $phone: 780px;
  
 
-
+.random-idea{
+    transform: translate(20px, -50px);
+    float: left;
+    color: white;
+    background-color: orange;
+    border: none;
+    margin: 4px;
+    padding: 6px;
+    font-family: sans-serif;
+    font-weight: 500px;
+    font-size: large;
+}
+.organiser{
+    transform: translate(0, -50px);
+    font-family: sans-serif;
+    font-weight: 500;
+}
 .todoText-ctn{
     display: inline-block;
     float: left;

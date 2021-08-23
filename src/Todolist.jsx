@@ -6,6 +6,8 @@ import {useDispatch} from 'react-redux';
 import "./Styles/todo.css"
 import {TiTick} from 'react-icons/ti';
 
+import Axios from "axios";
+
 
 
 
@@ -21,10 +23,20 @@ function Todolist() {
   const [todoHistory, setTodoHistory] = useState([])
   const [completedTodoToogle,setCompletedTodosToogle] = useState(false)
   const [completedTodoList, setCompletedTodoList] = useState([]);
-  
+  const [randomIdea, setrandomIdea] = useState("1")
 
-    
-    
+  const getIdea =() => {
+    Axios.get("https://www.boredapi.com/api/activity").then(
+      (response) => {
+        setrandomIdea(response.data.activity)
+        console.log(randomIdea);
+      }
+    )
+    .catch(err => console.error(err));
+  }
+ 
+  
+  
     
 
   useEffect(() => {
@@ -115,7 +127,8 @@ function Todolist() {
             
           </form>
           <div className="organiser">
-           
+          <button onClick={getIdea} className="random-idea">random idea generator</button>
+          {randomIdea}
           </div>
           <div>
 
