@@ -1,7 +1,5 @@
-# Useverb Task-list app
-
-
-Here is the project, it took me about 7-8 hours around a pretty hectic schedule and the only research I did was reading up on the on the redux syntax again Hope you enjoy using it.  I really enjoyed doing this to-do project and would love to work on projects like this at UseVerb!.
+# Todo-list app
+Here is a small project i did to test my react skills for the job im currently at, I really enjoyed doing this project and would love to work on projects at max kelsen.
 
 # Sign-in
 The sign-in page uses React/redux functions create and store password data, the user must enter a 4-digit name to allowed on to the next Dashboard section 
