@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Useverb-project/static/css/main.6b6277d6.chunk.css",
+    "main.js": "/Useverb-project/static/js/main.2d4fc31d.chunk.js",
+    "main.js.map": "/Useverb-project/static/js/main.2d4fc31d.chunk.js.map",
+    "runtime-main.js": "/Useverb-project/static/js/runtime-main.5af247e9.js",
+    "runtime-main.js.map": "/Useverb-project/static/js/runtime-main.5af247e9.js.map",
+    "static/js/2.5deb1c05.chunk.js": "/Useverb-project/static/js/2.5deb1c05.chunk.js",
+    "static/js/2.5deb1c05.chunk.js.map": "/Useverb-project/static/js/2.5deb1c05.chunk.js.map",
+    "index.html": "/Useverb-project/index.html",
+    "static/css/main.6b6277d6.chunk.css.map": "/Useverb-project/static/css/main.6b6277d6.chunk.css.map",
+    "static/js/2.5deb1c05.chunk.js.LICENSE.txt": "/Useverb-project/static/js/2.5deb1c05.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5af247e9.js",
+    "static/js/2.5deb1c05.chunk.js",
+    "static/css/main.6b6277d6.chunk.css",
+    "static/js/main.2d4fc31d.chunk.js"
+  ]
+}
